@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+    <hr>
+    <h1>CURRENCY<br>CONVERTER</h1>
+</body>
+<footer>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="{{ category }}"><br>{{ message }}</div>
+        {% endif %}
+    {% endwith %}
+</footer>
+</html>

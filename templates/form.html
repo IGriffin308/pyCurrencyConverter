@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/result" method="POST">
+    Convert from <input type="text" name="incurr" class="input"> <br>
+    Convert to <input type="text" name="outcurr" class="input"> <br>
+    Amount: <input type="text" name="inval" class="input"> <br>
+    <button type="submit">Convert</button>
+</form>
+{% endblock %}
